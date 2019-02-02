@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>	
+	<link href="paperplane.png" rel="SHORTCUT ICON">	
+	<title>學習資源</title>
+
+	<style type="text/css">
+
+	.title{
+		font-weight:bold;font-family:標楷體;text-align:center;font-size:18px;
+	}
+	.content{
+		width:1000px;margin-left:auto;margin-right:auto; 
+	}
+	.box{
+		width:280px;padding:10px;margin:10px;background-color:white;
+		display:inline-block;vertical-align:top;height:250px;line-height:30px;
+	}
+	.oldcontent{font-family:微軟正黑體;color:brown;margin-top:10px}
+
+	.oldtitle{font-family:標楷體;font-size:20px;width:120px;margin-top:10px;margin-bottom:10px;padding:10px;border:1px 
+		dashed blue;color:black;font-weight:bold;}
+
+	#bt1:hover{background-color:#999999}
+
+	input:focus{border:1px solid #ff0000;}
+
+	/*back to top button*/	
+	#myBtn {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 50px; /* Place the button at the bottom of the page */
+	right: 60px; /* 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: #66be66; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 18px; /* Increase font size */}
+	#myBtn:hover {
+  	background-color: #555; /* Add a dark-grey background on hover */}	
+	
+	/* Style the tab */
+	.tab {
+		float: left; border: 1px solid #cccccc; background-color: #f1f1f1; width: 10%; height: 300px;}
+	/* Style the buttons inside the tab */
+	.tab button {
+		font-family:微軟正黑體;display: block; background-color: rgba(211, 211, 211, 0.836); color: black; padding: 22px; width: 100%; border: none; outline: none; 
+		text-align: left; cursor: pointer; transition: 0.3s; font-size: 17px; height:60px; }
+	/* Change background color of buttons on hover */
+	.tab button:hover {
+		background-color: rgba(128, 128, 128, 0.623);}
+	/* Create an active/current "tab button" class */
+	.tab button.active {
+		background-color: #ccc;}
+	/* Style the tab content */
+	.tabcontent {
+		float: left; padding: 0px 12px; border: 1px solid #ccc; width: 70%; border-left: none; height: 300px;}
+	</style>
+	
+</head>
+<body style="margin:0px;background-color:#eeeeee";>
+	<div style="font-family:DFKai-sb;font-weight:bold;font-size:36px;padding:44px;text-align:center;
+		color:white;background-color:#003344;">其他&nbsp;&nbsp;</div>
+	<div style="padding:5px; background-color:lightgreen"></div>
+	<div style="padding:5px; background-color:lightblue"></div>
+	
+	<br><br>
+
+	<!--back to top button-->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+	<div class="tab">
+			<a href="index.html"><button class="tab button">首頁</button></a>
+			<a href="web.htm"><button class="tab button">嵌入影片</button></a>
+			<a href="prog.htm"><button class="tab button">小功能</button></a>
+			<a href="ocw.htm"><button class="tab button">文章進度條</button></a>
+			<a href="others.htm"><button class="tab button">其他</button></a>
+	</div>
+
+	
+	<h3 style="position:absolute; left:250px; font-family:微軟正黑體;">嵌入PDF檔</h3>
+	<br><br><br><br><br>
+	<div><embed style="position:absolute; left:250px" src= "遙控模型社.pdf" width= "800" height= "480" ></div>
+	
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<marquee style="font-family:標楷體; font-size:22px; font-weight:bold; color:rgba(255, 0, 0, 0.671);" 
+	scrollamount=17; bgcolor=lightblue  BEHAVIOR="ALTERNATE";>歡 迎 參 觀 本 站</marquee>
+	<br><br><br>
+	<div class="oldcontent" align="center">填寫訊息 <input type="text"/> <button id="bt1">送出</button>
+	<br><br><br>	
+
+<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+	function scrollFunction() {
+ 	 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  	} else {
+    document.getElementById("myBtn").style.display = "none";
+  	}
+	}
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+  	document.body.scrollTop = 0; // For Safari
+  	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
+</script>
+</body>
+</html>
