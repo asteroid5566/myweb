@@ -1,8 +1,8 @@
 
 
-Hi there, this is my first website.
+Hi there, I am a college student who love coding.
 
-This web is made by simple HTML, CSS and JavaScript.
+This is my first website, it is made by simple HTML, CSS and JavaScript.
 
 I put some tutorial link about computer science on the main page. 
 
