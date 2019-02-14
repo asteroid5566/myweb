@@ -1,6 +1,6 @@
 
 
-Hello, I am a college student who love coding.
+Hello, I am a college student who just start learning web development.
 
 This is my first website, it is made by simple HTML, CSS and JavaScript.
 
