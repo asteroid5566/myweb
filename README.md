@@ -8,4 +8,4 @@ Also this web is a place where I try new functions about web development.
 
 To watch the full website please visit https://asteroid5566.github.io/myweb/
 
-PS: This is unfinished.
+ps: This is unfinished.
