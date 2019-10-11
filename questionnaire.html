@@ -3,86 +3,9 @@
 <head>
 	<meta charset="utf-8"></meta>	
 	<link rel="shortcut icon" type="image/png" href="paperplane.png?">	
-	<title>功能測試</title>
+	<title>問卷測試</title>
 
 	<style type="text/css">
-
-	* {box-sizing: border-box}
-	.container {
-	width: 50%;
-	background-color: #ddd;
-	}
-	.skills {
-	text-align: right;
-	padding: 10px;
-	color: black;
-	}
-	.html {width: 87%; background-color: #4CAF50;}
-	.css {width: 78%; background-color: #2196F3;}
-	.js {width: 8.7%; background-color: #f44336;}
-	.php {width: 0.87%; background-color: yellow;}
-
-
-
-	.loader {
-	border: 16px solid #f3f3f3;
-	border-radius: 50%;
-	border-top: 16px solid #3498db;
-	width: 80px;
-	height: 80px;
-	-webkit-animation: spin 2s linear infinite; /* Safari */
-	animation: spin 1s linear infinite;
-	}
-	/* Safari */
-	@-webkit-keyframes spin {
-	0% { -webkit-transform: rotate(0deg); }
-	100% { -webkit-transform: rotate(360deg); }
-	}
-
-	@keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-	}
-	.accordion {
-			background-color: #ccc;
-			color: #444;
-			cursor: pointer;
-			padding: 18px;
-			width: 80%;
-			text-align: left;
-			border: none;
-			outline: none;
-			transition: 0.4s;
-		}
-		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-	.active, .accordion:hover {
-			background-color: gray;
-		}
-		/* Style the accordion panel. Note: hidden by default */
-	.panel {
-			padding: 0 18px;
-			background-color: white;
-			display: none;
-			width: 80%;
-			overflow: hidden;
-		}
-	.title{
-		font-weight:bold;font-family:標楷體;text-align:center;font-size:18px;
-		}
-	.content{
-			width:1000px;margin-left:auto;margin-right:auto;
-		}
-	.box{
-			width:280px;padding:10px;margin:10px;background-color:white;
-			display:inline-block;vertical-align:top;height:250px;line-height:30px;
-		}
-	.oldcontent{font-family:微軟正黑體;color:brown;margin-top:10px}
-
-	.oldtitle{font-family:標楷體;font-size:20px;width:120px;margin-top:10px;margin-bottom:10px;padding:10px;border:1px 
-			dashed blue;color:black;font-weight:bold;}
-	#bt1:hover{background-color:#999999}
-	input:focus{border:1px solid #ff0000;}
-
 
 	.title{
 		font-weight:bold;font-family:標楷體;text-align:center;font-size:18px;
@@ -142,7 +65,7 @@
 </head>
 <body style="margin:0px;background-color:#eeeeee";>
 	<div style="font-family:DFKai-sb;font-weight:bold;font-size:36px;padding:42px;text-align:center;
-		color:white;background-color:#003344;">功能測試&nbsp;&nbsp;</div>
+		color:white;background-color:#003344;">問卷測試&nbsp;&nbsp;</div>
 	<div style="padding:5px; background-color:lightgreen"></div>
 	<div style="padding:5px; background-color:lightblue"></div>
 	
@@ -156,60 +79,71 @@
             <a href="link.html"><button class="tab button">常用連結</button></a>
             <a href="function.html"><button class="tab button">功能測試</button></a>
             <a href="pdf.html"><button class="tab button">嵌入PDF</button></a>
-			<a href="video.html"><button class="tab button">嵌入影片</button></a>
-			<a href="questionnaire.html"><button class="tab button">問卷測試</button></a>
+            <a href="video.html"><button class="tab button">嵌入影片</button></a>
+            <a href="questionnaire.html"><button class="tab button">問卷測試</button></a>
             <a href="article.html"><button class="tab button">文章進度條</button></a>
-	</div>
-
-	<div style="position:absolute; left:250px"><h2 style="font-family:微軟正黑體;">轉圈圈</h2></div>
+    </div>
+    
+    <div class="content">
+        <div class="box" style="background-color:#eeeeee; width:900px; height:2000px">
+            <p>投資問卷範例</p>
+            <form action="personaldata.py" method="post">
+                <fieldset>
+                    <legend>個人資料:</legend>
+                    姓名 : <input type ="text" name="name"><br>
+                    帳號 : <input type ="text" name="id"><br>
+                    密碼 (至少8碼，含英文與數字) : <input type="password" name="pwd">
+                    <!--加密:<keygen name="security">--><br>
+                    性別 : <input type="radio" name="gender" value="male" checked>男性
+                    <input type="radio" name="gender" value="female">女性
+					<input type="radio" name="gender" value="other">其他<br>
+                    學歷 : 
+                    <select>
+                        <option value="phd">博士</option>
+                        <option value="master">碩士</option>
+                        <option value="undergrade">大學</option>
+                        <option value="senior">高中職</option>
+                        <option value="other">其他</option>
+                    </select><br>
+                    出生年月日(西元) : 
+                    <input type="date" name="bday"><br>
+                    E-mail : 
+                    <input type="email" name="email"><br>
+				</fieldset>
+				<br>
+                <fieldset>
+					<legend>投資經驗</legend>
+					<br>
+                    <input type="checkbox" name="inv_exper" value="house">房地產
+                    <input type="checkbox" name="inv_exper" value="stock">股票
+                    <input type="checkbox" name="inv_exper" value="fund">基金
+                    <input type="checkbox" name="inv_exper" value="warrant">權證<br>
+                    <input type="checkbox" name="inv_exper" value="future">期貨
+                    <input type="checkbox" name="inv_exper" value="option">選擇權
+                    <input type="checkbox" name="inv_exper" value="foreign">外幣
+                    <input type="checkbox" name="inv_exper" value="bond">債券
+                    <br><br>
+                    <label for="experience">特殊投資經驗 :</label><br>
+                    <textarea name="experience" rows="10" cols="30"></textarea>
+                </fieldset><br>
+                <!--<input type="submit">-->
+                &nbsp;<button type="button" onclick="alert('感謝您的回答')">提交</button>
+                <input type="reset">
+            </form>
+        </div>
+    </div>
+    
 	<br><br><br>
-	<div style="position:absolute;left:250px;width:30%;height:160px;
-	color:black;background-color:#ccc">
-	<br><br>
-	<div class="loader" style="position:absolute; left:160px;"></div>
-	</div>
-	
-
-	<br><br><br><br><br><br><br><br><br><br>
-<div style="position:absolute; left:250px; width:80%">
-	<h2 style="font-family:微軟正黑體">下拉式列表</h2>
-	<button class="accordion">click here</button>
-	<div class="panel">
-		<p>000000000000000</p>
-	</div>
-
-	<button class="accordion">click here</button>
-	<div class="panel">
-	<p>11111111111111111</p>
-	</div>
-
-	<button class="accordion">click here</button>
-	<div class="panel">
-	<p>2222222222222222</p>
-	</div>
-
-	<br><br><br>
-	<h2 style="font-family: 微軟正黑體";>進度條</h2>
-	<p>1</p>
-	<div class="container">
-	<div class="skills html">87%</div>
-	</div>
-	<p>2</p>
-	<div class="container">
-	<div class="skills css">78%</div>
-	</div>
-	<p>3</p>
-	<div class="container">
-	<div class="skills js">8.7%</div>
-	</div>
-	<p>4</p>
-	<div class="container">
-	<div class="skills php">0.87%</div>
-	</div>
-</div>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	<br><br><br><br><br><br><br><br><br><br>
+    <script language="JavaScript">
+        VIH_BackColor = "palegreen";
+        VIH_ForeColor = "navy";
+        VIH_FontPix = "16";
+        VIH_DisplayFormat = "Your IP:<br>IP Address: %%IP%%<br>Host: %%HOST%%";
+        VIH_DisplayOnPage = "yes";
+        </script>
+    <script language="JavaScript" src="https://scripts.hashemian.com/js/visitorIPHOST.js.php">
+        </script>
+    <br><br>
 	<marquee style="font-family:標楷體; font-size:22px; font-weight:bold; color:rgba(255, 0, 0, 0.671);" 
 	scrollamount=17; bgcolor=lightblue  BEHAVIOR="ALTERNATE";>歡 迎 參 觀 本 站</marquee>
 	<br><br><br>
@@ -217,20 +151,6 @@
 	<br><br><br>	
 
 <script>
-	var acc = document.getElementsByClassName("accordion");
-    var i;
-        
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-        });
-    }
 	// When the user scrolls down 20px from the top of the document, show the button
 	window.onscroll = function() {scrollFunction()};
 	function scrollFunction() {
