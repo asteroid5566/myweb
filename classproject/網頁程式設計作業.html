@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>	
+	<link rel="shortcut icon" type="image/png" href="images/paperplane.png?">	
+	<title>網頁程式設計作業</title>
+
+	<style type="text/css">
+	.tab button {
+		float: left; font-family: 微軟正黑體;display: block; background-color: rgba(211, 211, 211, 0.836); color: black; width:25%; border: none; outline: none; 
+		cursor: pointer; transition: 0.3s; font-size: 20px; font-weight: bold; height:48px; border: 0.5px solid gray;
+	}
+	.tab button:hover{
+		background-color: rgba(128, 128, 128, 0.623);
+	}
+	.tabcontent{
+		float: left; padding: 0px 12px; border: 1px solid #ccc; width: 70%; border-left: none; height: 300px;
+	}
+	
+	/*返回頂部按鈕*/	
+	#myBtn {
+		display: none; position: fixed;	bottom: 60px; right: 70px; z-index: 99;	border: none; outline: none; background-color: #66be66;
+		color: white; cursor: pointer; padding: 20px; border-radius: 10px; font-size: 18px;
+	}
+	#myBtn:hover {
+		background-color: red;
+	}
+	
+	.banner{
+		position:absolute; right:22%; top:40px; color:#fff; font-weight:bold; font-style:italic; font-size: 62px;
+		text-shadow: 0 0 0.2em #87F, 0 0 0.2em rgb(53,229,229), 0 0 0.2em #87F, 0 0 0.2em rgb(53,229,229), 3px 3px lightgray;
+	}
+
+	.title{
+		font-weight:bold; font-family: 微軟正黑體; font-size:32px; text-align:center; color:rgb(27,133,232);
+	}
+	
+	.content{
+		font-family:微軟正黑體;color:brown;font-weight: bold; margin-top:10px; font-size: 20px; line-height:40px;
+	}
+
+	#bt1:hover{
+		background-color:#999999
+	}
+
+	@keyframes image{
+		15%{transform: translatex(7px);}
+		40%{transform: translatex(-7px);}
+		65%{transform: translatex(5px);}
+		85%{transform: translateX(-5px);}
+		100%{transform: translateX(0px);}
+	}
+
+	.cssAni:hover{
+		animation: image 0.4s 1;
+	}
+	</style>
+</head>
+
+<body style="margin:0px; background-color:rgb(70,70,70); font-size: 18px; font-family: 微軟正黑體;";>
+	<div style="background-color:#eeeeee; width:70%; margin-left: 15%;">
+		<img src="images/background.png" width = 100%>
+
+		<div class="banner">Gamer's Armory</div>
+		<!--返回頂部按鈕-->
+		<button id="myBtn" onclick="topFunction()">Top</button>
+
+		<div class="tab">
+				<a href="#interduction"><button class="tab button">賣場介紹</button></a>
+				<a href="#table"><button class="tab button">規格表</button></a>
+				<a href="#product"><button class="tab button">商品</button></a>
+				<a href="#form"><button class="tab button">表單</button></a>
+		</div>
+		<br>
+		<div id="interduction"></div>
+		<br>
+		<div style="padding-left: 2%; padding-right: 2%;">
+			<div class="content" style="text-align: center;">
+				<p class="title">---- 賣 場 介 紹 ----</p>
+				<br>
+				<p style="text-align: center; color:white; font-size: 46px; font-weight: bold; font-style: italic;
+					text-shadow: 0 0 0.2em red, 0 0 0.2em red, 0 0 0.2em red, 0 0 0.2em red, 0 0 0.2em red, 4px 4px lightgray; ">Gamer's Armory</p>
+				<br>
+				<p style="font-size: 22px;">歡迎來到玩家兵工廠 !   準備好你的武器，享受頂級的效能和強大的散熱</p>
+				<p style="font-size: 22px;">這些最新的顯示卡除了外型亮眼，更能讓你在戰場上無後顧之憂</p>
+				<ul style="display: inline-block; text-align: left;">
+					<li>下單後三天內出貨</li>
+					<li>全站照片皆在特定條件下拍攝，實際顏色以實品為主</li>
+					<li>網路購買之商品享有七天猶豫期</li>
+					<li>收到瑕疵品或欲退換貨請點擊連結<a href="https://www.ncue.edu.tw/" target="_blank">與客服聯繫</a></li>
+				</ul>
+				<br><br><br>
+			</div>
+		</div>
+	</div>	
+
+	<div id="table"></div>
+	<div style="background-color:rgb(211,233,255); width:70%; margin-left: 15%; margin-top:28px;">
+		<br>
+		<p class="title">---- 規 格 表 ----</p>
+		<br>
+		<table style="margin-left: 5%; line-height: 50px; text-align: center; font-size: 16px; font-family: 微軟正黑體; font-weight: bold; color:black" cellpadding="10%">
+			<tr style="background-color: lightgray;">
+				<td>顯示卡名稱</td>
+				<td>核心時脈</td>
+				<td>CUDA 數</td>
+				<td>輸出介面</td>
+				<td>電源接口</td>
+				<td>顯卡長度</td>
+				<td>定價</td>
+			</tr>
+			<tr style="background-color: #fff">
+				<td style="text-align: left;">ASUS TUF-RTX3090-O24G-GAMING</td>
+				<td>1770MHz</td>
+				<td>10496</td>
+				<td>2*HDMI / 3*DP</td>
+				<td>2*8pin</td>
+				<td>30cm</td>
+				<td>49990</td>
+			</tr>
+			<tr style="background-color: lightgray;">
+				<td style="text-align: left;">ASUS ROG-STRIX-RTX3090-O24G-GAMING</td>
+				<td>1890MHz</td>
+				<td>10496</td>
+				<td>2*HDMI / 3*DP</td>
+				<td>3*8pin</td>
+				<td>31.9cm</td>
+				<td>59990</td>
+			</tr>
+			<tr style="background-color: rgba(245,245,245)">
+				<td style="text-align: left;">MSI RTX3090 GAMING X TRIO 24G</td>
+				<td>1785MHz</td>
+				<td>10496</td>
+				<td>1*HDMI / 3*DP</td>
+				<td>3*8pin</td>
+				<td>33.5cm</td>
+				<td>49900</td>
+			</tr>
+			<tr style="background-color: lightgray">
+				<td style="text-align: left;">MSI RTX3090 SUPRIM X 24G</td>
+				<td>1875MHz</td>
+				<td>10496</td>
+				<td>1*HDMI / 3*DP</td>
+				<td>3*8pin</td>
+				<td>33.6cm</td>
+				<td>52900</td>
+			</tr>
+		</table>																																																																								
+		<br><br><br><br><br>
+	</div>
+
+	<div id="product"></div>
+	<div style="background-color: black; width:70%; margin-left: 15%; margin-top:28px;">
+		<br><br>
+		<p class="title">---- 商 品 圖 ----</p>
+		<br>
+			<div style="margin-left:15%">
+				<img class="cssAni" src="images/TUF-RTX3090-O24G-GAMING.jpg" style="height:320px;">
+				<img class="cssAni" src="images/ROG-STRIX-RTX3090-O24G-GAMING.jpg" style="height:320px; margin-left: 12%;">
+			</div>
+			<div style="display: inline-block; margin-left: 15%; color:white; line-height: 50px;">ASUS TUF-RTX3090-O24G-GAMING</div>
+			<div style="display: inline-block; margin-left: 10%; color: white; line-height: 50px;">ASUS ROG-STRIX-RTX3090-O24G-GAMING</div>
+			<div style="margin-top:5%; margin-left:15%">
+				<img class="cssAni" src="images/RTX3090 GAMING X TRIO 24G.png" style="height:320px;">
+				<img class="cssAni" src="images/RTX3090 SUPRIM X 24G.png" style="height: 320px; margin-left: 12%">
+			</div>
+			<div style="display: inline-block; margin-left: 15%; color:white; line-height: 50px;">MSI RTX3090 GAMING X TRIO 24G</div>
+			<div style="display: inline-block; margin-left: 18%; color:white; line-height: 50px;">MSI RTX3090 SUPRIM X 24G</div>
+		<br><br><br><br><br><br>
+	</div>
+
+	<div id="form"></div>
+	<div style="background-color:#eeeeee; width:70%; margin-left: 15%; margin-top:28px;">
+		<br><br>
+		<div class="content" style="text-align: center;">
+			<div class="title">---- 訂 購 單 ----</div>
+			<br>
+			<p>---- 訂購人資料 ----</p>
+			<form>
+				<div>姓名: <input type="text"></div>
+				<div>暱稱: <input type="text"  placeholder="可免填"></div>
+				<div>地址: <input type="text" placeholder="請填寫郵遞區號"></div>
+				<p>---- 商品選擇 ----</p>
+				<div>
+					<select style="display: inline-block;">
+						<option>------請選擇商品------</option>
+						<option>ASUS TUF-RTX3090-O24G-GAMING</option>
+						<option>ASUS ROG-STRIX-RTX3090-O24G-GAMING</option>
+						<option>MSI RTX3090 GAMING X TRIO 24G</option>
+						<option>MSI RTX3090 SUPRIM X 24G</option>
+					</select>
+					<div style="width:50px; display: inline-block;"> 數量: </div>
+					<input type="text">
+				</div>
+				<p>---- 付款方式 ----</p>
+				<div>
+					<input type="radio"><div style="display: inline-block;">貨到付款</div>
+					<input type="radio"><div style="display: inline-block;">信用卡</div>
+					<input type="radio"><div style="display: inline-block;">銀行轉帳</div>
+				</div>
+				<br>
+				<input type="reset" value="重填" style="background-color: red;"></td>
+				<button id="bt1" onclick="javascript:SendForm();" style="background-color: lightgreen;">送出</button></td>
+			</form>
+		</div>
+		<br><br><br>
+		<marquee style="font-family: 標楷體; font-size:24px; color:red" scrollamount=16; bgcolor=lightblue>
+			感謝近期購買者: 林 X 宣 、 imhappy666 、 彭 X 賢 、 asd878787 、 NoGameNoLife 、 張 X 珊 、 reader1990 、 QWERTY 、 61245134413421341134 、 黃 X 政</marquee>
+		<div class="content" align="center">對我們的建議 <input type="text"/><button id="bt1" onclick="alert('感謝您的寶貴意見')" location.herf="#form">送出</button>
+		<br><br><br>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	//捲動20px顯示按鈕
+	window.onscroll = function() {scrollFunction()};
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.getElementById("myBtn").style.display = "block";
+		} else {
+			document.getElementById("myBtn").style.display = "none";
+		}
+	}
+	//點擊按鈕返回頂部
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	function SendForm(){
+		alert('已收到您的訂單，將盡速安排出貨');
+		window.location.hash = "#form";
+	}
+</script>
